@@ -31,7 +31,7 @@ require_once("bd_connection.php");
                     <a class="nav-link" href="type_users.php">Usuarios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Préstamos</a>
+                    <a class="nav-link" href="users.php">Préstamos</a>
                 </li>
             </ul>
         </div>

@@ -49,7 +49,7 @@
             $nombreUsuario = $_POST['nombre'];
 
             // Realizar la inserción en la base de datos (debes agregar validación y manejo de errores)
-            $sql = "INSERT INTO TipoUsuarios (nombre) VALUES ('$nombreUsuario')";
+            $sql = "INSERT INTO Usuarios (nombre) VALUES ('$nombreUsuario')";
             if ($conn->query($sql) === TRUE) {
                 mostrarMensaje("Usuario creado exitosamente.");
             } else {
@@ -67,7 +67,7 @@
                 $nuevoNombre = $_POST['nuevo_nombre'];
 
                 // Realizar la actualización en la base de datos (debes agregar validación y manejo de errores)
-                $sql = "UPDATE TipoUsuarios SET nombre='$nuevoNombre' WHERE id=$idUsuario";
+                $sql = "UPDATE Usuarios SET nombre='$nuevoNombre' WHERE id=$idUsuario";
                 if ($conn->query($sql) === TRUE) {
                     mostrarMensaje("Usuario actualizado exitosamente.");
                 } else {
@@ -81,7 +81,7 @@
             $idUsuarioEliminar = $_GET['eliminar'];
 
             // Realizar la eliminación en la base de datos (debes agregar validación y manejo de errores)
-            $sql = "DELETE FROM TipoUsuarios WHERE id=$idUsuarioEliminar";
+            $sql = "DELETE FROM Usuarios WHERE id=$idUsuarioEliminar";
             if ($conn->query($sql) === TRUE) {
                 mostrarMensaje("Usuario eliminado exitosamente.");
             } else {
@@ -114,16 +114,16 @@
             <tbody>
                 <?php
                 // Realiza una consulta SELECT en la base de datos
-                $sql = "SELECT * FROM TipoUsuarios";
+                $sql = "SELECT * FROM Usuarios";
                 $result = $conn->query($sql);
 
                 while ($row = $result->fetch_assoc()) {
                     echo "<tr>";
-                    echo "<td>" . $row['id'] . "</td>";
+                    echo "<td>" . $row['dni'] . "</td>";
                     echo "<td>" . $row['nombre'] . "</td>";
                     echo "<td>
                             <button class='btn btn-warning' data-toggle='modal' data-target='#editModal" . $row['id'] . "'>Editar</button>
-                            <a class='btn btn-danger' href='?eliminar=" . $row['id'] . "'>Eliminar</a>
+                            <a class='btn btn-danger' href='Usuarios.php?eliminar=" . $row['id'] . "'>Eliminar</a>
                           </td>";
                     echo "</tr>";
 
