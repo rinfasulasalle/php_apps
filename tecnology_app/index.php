@@ -24,7 +24,7 @@ if ($conn->connect_error) {
             body {
                 width: 210mm;
                 height: 297mm;
-                margin: 0 auto;
+                margin: 10px;
             }
 
             .card {
