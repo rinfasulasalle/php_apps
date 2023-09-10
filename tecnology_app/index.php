@@ -62,7 +62,7 @@ if ($conn->connect_error) {
     </style>
 </head>
 <body>
-    <!-- -->
+    <!-- 
     <h2>Lista de Procesadores</h2>
     <div class="container">
         <div class="row">
@@ -106,7 +106,8 @@ if ($conn->connect_error) {
             
         </div>
     </div>
-    <!--
+    -->
+    <!---->
     <h2>Lista de Unidades de Almacenamiento</h2>
     <div class="container">
         <div class="row">
@@ -151,7 +152,7 @@ if ($conn->connect_error) {
         </div>
     <!-- -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script> 
     <script>
         // Función para exportar la lista de procesadores a PDF
         function exportToPDF() {
