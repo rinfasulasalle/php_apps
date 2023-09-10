@@ -127,8 +127,9 @@ if ($conn->connect_error) {
                     echo '</div>';
                     echo '<div class="col-md-8">';
                     echo '<div class="card-body">';
-                    echo '<h5 class="card-title" style="font-size: 24px; color: red;">' . $row['nombre_comercial_largo'] . '</h5>';
+                    echo '<h5 class="card-title" style="font-size: 24px; color: red;"> Nombre: ' . $row['nombre_comercial_largo'] . '</h5>';
                     echo '<p class="card-text">Marca: ' . $row['marca'] . '</p>';
+                    echo '<p class="card-text">ESPECIFICACIONES TÉCNICAS</p>';
                     echo '<p class="card-text">Tecnología: ' . $row['tecnologia'] . '</p>';
                     echo '<p class="card-text">Interfaz: ' . $row['interfaz'] . '</p>';
                     echo '<p class="card-text">Capacidad de Almacenamiento: ' . $row['capacidad_almacenamiento'] . ' GB</p>';
