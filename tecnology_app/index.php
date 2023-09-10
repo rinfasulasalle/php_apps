@@ -82,16 +82,16 @@ if ($conn->connect_error) {
                     echo '</div>';
                     echo '<div class="col-md-8">';
                     echo '<div class="card-body">';
-                    echo '<h5 class="card-title">' . $row['nombre_completo'] . '</h5>';
+                    echo '<h5 class="card-title" style="font-size: 24px; color: red;">' . $row['nombre_completo'] . '</h5>';
                     echo '<p class="card-text">Marca: ' . $row['marca'] . '</p>';
                     echo '<p class="card-text">Frecuencia Base: ' . $row['frecuencia_base'] . ' GHz</p>';
                     echo '<p class="card-text">Frecuencia Máxima: ' . $row['frecuencia_maxima'] . 'GHz</p>';
+                    echo '<p class="card-text">Socket : ' . $row['socket'] . '</p>';
                     echo '<p class="card-text">Caché: ' . $row['cache'] . '</p>';
                     echo '<p class="card-text">Tamaño Memoria Máximo: ' . $row['tamano_memoria_maximo'] . '</p>';
                     echo '<p class="card-text">Tipos Memoria Compatibles: ' . $row['tipos_memoria_compatibles'] . '</p>';
                     echo '<p class="card-text">Gráficos Procesador: ' . $row['graficos_procesador'] . '</p>';
                     echo '<p class="card-text">Precio: $' . $row['precio_dolares'] . '</p>';
-                    // echo '<p class="card-text">ID: ' . $row['id'] . '</p>';
                     // Agregar más campos según sea necesario
                     echo '</div>';
                     echo '</div>';
@@ -126,7 +126,7 @@ if ($conn->connect_error) {
                     echo '</div>';
                     echo '<div class="col-md-8">';
                     echo '<div class="card-body">';
-                    echo '<h5 class="card-title">' . $row['nombre_comercial_largo'] . '</h5>';
+                    echo '<h5 class="card-title" style="font-size: 24px; color: red;">' . $row['nombre_comercial_largo'] . '</h5>';
                     echo '<p class="card-text">Marca: ' . $row['marca'] . '</p>';
                     echo '<p class="card-text">Tecnología: ' . $row['tecnologia'] . '</p>';
                     echo '<p class="card-text">Interfaz: ' . $row['interfaz'] . '</p>';
