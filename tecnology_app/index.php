@@ -24,37 +24,32 @@ if ($conn->connect_error) {
             body {
                 width: 210mm;
                 height: 297mm;
-                margin: 10px;
+                margin: 5px;
             }
 
             .card {
-                border: 2px solid black;
-            }
+            border: thick solid black;
+        }
         }
 
         /* Estilo personalizado para ajustar el tamaño de las imágenes */
-        .card-img {
-            width: 100%;
-            height: auto;
-        }
+        
 
-        /* Estilo personalizado para el encabezado */
+        /* Resto de estilos CSS (sin cambios) */
         h1 {
             text-align: center;
             margin-top: 20px;
         }
 
-        /* Estilo personalizado para el contenedor principal */
         .container {
             padding: 20px;
         }
 
-        /* Estilo para ajustar el margen inferior de cada tarjeta */
         .card {
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+            border: thick solid black;
         }
 
-        /* Estilo personalizado para el pie de página */
         footer {
             text-align: center;
             margin-top: 20px;
@@ -62,7 +57,7 @@ if ($conn->connect_error) {
     </style>
 </head>
 <body>
-    <!-- 
+    <!-- -->
     <h2>Lista de Procesadores</h2>
     <div class="container">
         <div class="row">
@@ -78,14 +73,14 @@ if ($conn->connect_error) {
                     echo '<div class="card">';
                     echo '<div class="row no-gutters">';
                     echo '<div class="col-md-4">';
-                    echo '<img src="' . $row['ruta_imagen_referencial'] . '" class="card-img" alt="Imagen Referencial">';
+                    echo '<img src="' . $row['ruta_imagen_referencial'] . '" class="card-img" alt="Imagen Referencial" style="max-width: 300px; max-height: 300px;">';
                     echo '</div>';
                     echo '<div class="col-md-8">';
                     echo '<div class="card-body">';
                     echo '<h5 class="card-title" style="font-size: 24px; color: red;">' . $row['nombre_completo'] . '</h5>';
                     echo '<p class="card-text">Marca: ' . $row['marca'] . '</p>';
-                    echo '<p class="card-text">Frecuencia Base: ' . $row['frecuencia_base'] . ' GHz</p>';
-                    echo '<p class="card-text">Frecuencia Máxima: ' . $row['frecuencia_maxima'] . 'GHz</p>';
+                    echo '<p class="card-text">Frecuencia Base/Máxima: ' . $row['frecuencia_base'] . ' GHz/ '.$row['frecuencia_maxima'].'GHz.</p>';
+                    //echo '<p class="card-text">Frecuencia Máxima: ' . $row['frecuencia_maxima'] . 'GHz</p>';
                     echo '<p class="card-text">Socket : ' . $row['socket'] . '</p>';
                     echo '<p class="card-text">Caché: ' . $row['cache'] . '</p>';
                     echo '<p class="card-text">Tamaño Memoria Máximo: ' . $row['tamano_memoria_maximo'] . '</p>';
@@ -106,7 +101,7 @@ if ($conn->connect_error) {
             
         </div>
     </div>
-    -->
+    <!-- -->
     <!---->
     <h2>Lista de Unidades de Almacenamiento</h2>
     <div class="container">
